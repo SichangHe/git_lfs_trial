@@ -1,0 +1,12 @@
+on:
+  push:
+jobs:
+  Clone:
+    name: Clone with Git LFS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          lfs: true
+      - run: cat health_kit_back.webp
+      - run: cat calendar.png
